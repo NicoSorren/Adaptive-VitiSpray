@@ -1,0 +1,146 @@
+# 🍇 Adaptive-VitiSpray
+
+**Sistema de Visión Artificial y Control Co-simulado Adaptativo para Pulverización Dirigida en Viñedos**  
+*Proyecto Final de Estudios (PFE) — Ingeniería*
+
+---
+
+## 📌 Descripción del Proyecto
+
+**Adaptive-VitiSpray** es una plataforma de agricultura de precisión diseñada para optimizar la aplicación de fitosanitarios contra el **Oídio de la vid (*Erysiphe necator*)**. 
+
+A diferencia de la pulverización tradicional a manta (que rocía el 100% de la hilera de forma homogénea independientemente del estado sanitario), este sistema implementa:
+1. **Percepción en tiempo real (YOLOv11-seg):** Detección y segmentación de colonias de oídio a partir de cámaras montadas en un vehículo agrícola autónomo (rover/tractor).
+2. **Lógica de Decisión y Buffer Radial:** Delimitación de zonas de tratamiento alrededor de focos infecciosos basada en la dispersión biológica de esporas.
+3. **Control Adaptativo y Co-simulación:** Sincronización temporal entre la cámara y las electroválvulas de pulverización considerando velocidad de avance y retardos de actuación, cuantificando el ahorro efectivo de agroquímico.
+
+---
+
+## 🏗️ Arquitectura del Sistema
+
+```
+[ Cámara a Bordo ] ──▶ [ YOLOv11-seg (Inferencia 8.3ms) ]
+                              │
+                              ▼
+                 [ Detección de Focos de Oídio ]
+                              │
+                              ▼
+            [ Algoritmo de Buffer Radial y Decisión ]
+                              │
+                              ▼
+         [ Sincronización Temporal (Cámara ➔ Boquilla) ]
+                              │
+                              ▼
+                 [ Actuación PWM Electroválvula ]
+                 (100% en foco/buffer | 0% en sano)
+```
+
+---
+
+## 📁 Estructura del Repositorio
+
+```text
+Adaptive-VitiSpray/
+├── docs/                        # Documentación técnica, anteproyecto e investigaciones
+│   ├── Anteproyecto PFE...pdf
+│   └── Detección de Oídio en Vid.pdf
+├── src/                         # Código fuente modular
+│   ├── perception/              # Módulo de visión y segmentación
+│   ├── control/                 # Lógica de decisión, severidad y buffer
+│   └── simulation/              # Entorno de co-simulación cinemática
+├── prepare_monoclass_dataset.py # Generador de dataset mono-clase exclusivo para oídio
+├── train_baseline.py            # Pipeline de entrenamiento de YOLOv11-seg en PyTorch/CUDA
+├── visualize_samples.py         # Script de inferencia y visualización en alta resolución
+├── requirements.txt             # Dependencias del proyecto
+├── .gitignore                   # Exclusión de binarios, pesos y datasets
+└── README.md                    # Documentación principal
+```
+
+---
+
+## 🚀 Instalación y Configuración del Entorno
+
+### 1. Clonar el repositorio
+```bash
+git clone https://github.com/tu-usuario/Adaptive-VitiSpray.git
+cd Adaptive-VitiSpray
+```
+
+### 2. Crear y activar el entorno virtual (`venv`)
+
+En **Windows (PowerShell)**:
+```powershell
+# Opción A: Heredando paquetes base con CUDA instalado en el sistema:
+python -m venv --system-site-packages venv
+.\venv\Scripts\Activate.ps1
+
+# Opción B: Entorno completamente aislado desde cero:
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
+```
+
+### 3. Instalar dependencias
+```powershell
+pip install -r requirements.txt
+```
+
+---
+
+## 📊 Dataset y Preparación
+
+El dataset base se descarga desde Roboflow:
+* **Fuente:** [Final Grape Leaf Disease Detection and Classification (Roboflow)](https://universe.roboflow.com/thesis-t6sjh/final-grape-leaf-disease-detection-and-classification)
+* **Formato:** YOLOv11 Instance Segmentation (polígonos de máscaras).
+
+Para estructurar el dataset **Mono-clase (exclusivo para Oídio)** sin duplicar almacenamiento (mediante *hardlinks*):
+```powershell
+python prepare_monoclass_dataset.py
+```
+
+Distribución del conjunto de datos:
+* **Total imágenes:** 6.955
+* **Imágenes con Oídio confirmadas:** 3.065 (10.884 polígonos etiquetados)
+* **Imágenes de control negativo (hojas sanas / fondo):** 3.890
+
+---
+
+## 🏋️ Entrenamiento del Modelo
+
+Para lanzar el entrenamiento con aceleración por GPU (CUDA):
+
+```powershell
+# Entrenamiento Mono-clase (60 épocas, batch seguro para 6GB VRAM):
+python train_baseline.py --epochs 60 --batch 8 --name monoclass_pm_v1
+```
+
+Parámetros clave de `train_baseline.py`:
+* `--model`: Modelo base (`yolo11s-seg.pt`, `yolo11m-seg.pt`).
+* `--epochs`: Número máximo de épocas.
+* `--patience`: Épocas sin mejora antes de detenerse (Early Stopping).
+* `--batch`: Tamaño de lote (8 recomendado para GPUs de 6GB VRAM).
+* `--device`: Dispositivo de cómputo (`0` para GPU NVIDIA CUDA).
+
+---
+
+## 📈 Resultados Obtenidos (Modelo Mono-clase)
+
+Evaluación sobre el conjunto independiente de validación (1.455 imágenes):
+
+| Métrica | Valor Obtenido | Relevancia en el Proyecto |
+|---|:---:|---|
+| **Precisión de Máscara (Precision)** | **80.7%** *(Pico: 84.8%)* | Mínima tasa de falsos positivos; evita desperdicio de producto. |
+| **Sensibilidad (Recall)** | **56.8% - 60.0%** | Cobertura de colonias visible; compensada mediante el buffer radial. |
+| **mAP@50 (Máscara Poligonal)** | **64.1%** | Precisión de contorno y solapamiento de la enfermedad. |
+| **mAP@50-95 (Exigente)** | **52.9%** | Calidad geométrica en múltiples umbrales de severidad. |
+| **Latencia de Inferencia** | **8.3 ms** (~120 FPS) | Capacidad de procesamiento en tiempo real a bordo del rover. |
+
+---
+
+## 🔬 Inferencia Visual
+
+Para verificar visualmente cómo segmenta el modelo sobre hojas enfermas:
+```powershell
+python visualize_samples.py
+```
+Las predicciones en alta resolución se almacenan en `predicciones_visuales/`.

@@ -1,0 +1,49 @@
+# Entornos virtuales
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Byte-compiled / optimizados de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Datasets pesados (superan el límite de 100MB de GitHub)
+# Los datos se descargan desde Roboflow mediante el enlace en el README
+Final Grape Leaf Disease Detection and Classification.v1i.yolov11/
+dataset_monoclass_powdery_mildew/
+*.cache
+*.cache.npy
+labels.cache
+
+# Archivos de pesos pesados (Pesos de PyTorch / ONNX / TensorRT)
+*.pt
+*.pth
+*.onnx
+*.engine
+weights/
+yolo11s-seg.pt
+yolo11n-seg.pt
+yolo11m-seg.pt
+
+# Salidas de entrenamiento y predicciones locales
+runs/
+predicciones_visuales/
+test_link/
+
+# Configuraciones de IDE y Sistema Operativo
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs y temporales
+*.log
+scratch/

@@ -1,0 +1,11 @@
+# Dependencias principales de Adaptive-VitiSpray
+# Para soporte CUDA en PyTorch:
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
+
+ultralytics>=8.3.0
+opencv-python>=4.8.0
+matplotlib>=3.7.0
+Pillow>=10.0.0
+PyYAML>=6.0
+numpy>=1.24.0
+pandas>=2.0.0
