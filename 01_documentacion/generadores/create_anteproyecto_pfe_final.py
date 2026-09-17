@@ -220,7 +220,8 @@ def generate_doc():
         r_tag.bold = True
         p.add_run(val)
 
-    out_path = Path("docs") / "Anteproyecto_PFE_Sorrentino.docx"
+       # Guardar en 01_documentacion/anteproyecto
+    out_path = Path(__file__).resolve().parent.parent / "anteproyecto" / "Anteproyecto_PFE_Sorrentino.docx"
     doc.save(str(out_path))
     print(f"Documento generado exitosamente en: {out_path.resolve()}")
 

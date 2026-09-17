@@ -1,9 +1,9 @@
 from pathlib import Path
 import sys
 
-# La carpeta src/paths.py está dentro de Adaptive-VitiSpray/src/
-# Subimos un nivel (parent) para llegar a src/ y otro nivel para llegar a la raíz.
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
+# La carpeta vitispray/paths.py está dentro de Adaptive-VitiSpray/src/vitispray/
+# Subimos un nivel para llegar a vitispray/, otro para src/ y otro para la raíz.
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 
 # 1. Validación Básica de Seguridad
 # Comprobamos la existencia de marcadores clave de la raíz del proyecto

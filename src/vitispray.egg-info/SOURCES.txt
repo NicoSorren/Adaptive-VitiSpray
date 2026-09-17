@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/vitispray/__init__.py
+src/vitispray/paths.py
+src/vitispray.egg-info/PKG-INFO
+src/vitispray.egg-info/SOURCES.txt
+src/vitispray.egg-info/dependency_links.txt
+src/vitispray.egg-info/top_level.txt
+src/vitispray/control/__init__.py
+src/vitispray/perception/__init__.py
+src/vitispray/simulation/__init__.py
