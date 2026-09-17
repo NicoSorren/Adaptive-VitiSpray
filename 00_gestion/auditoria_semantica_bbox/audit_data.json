@@ -1,0 +1,726 @@
+[
+  {
+    "idx": 1,
+    "source": "Roboflow",
+    "filename": "powdery324_jpg.rf.a57751afd7cf249f08125d3d7ba0115f.jpg",
+    "resolution": "256x256",
+    "gt_boxes": 3,
+    "gt_areas_pct": [
+      8.63,
+      5.26,
+      7.29
+    ],
+    "pred_high_count": 3,
+    "pred_high_confs": [
+      0.952,
+      0.941,
+      0.914
+    ],
+    "pred_low_count": 3,
+    "iou_gt_vs_pred": [
+      0.986,
+      0.967,
+      0.798
+    ],
+    "out_file": "01_Roboflow_powdery324_jpg.rf.a57751afd7cf249f08125d3d7ba0115f.jpg"
+  },
+  {
+    "idx": 2,
+    "source": "Roboflow",
+    "filename": "powdery495_jpg.rf.6847cccc3739725c604efc4b25bd1a22.jpg",
+    "resolution": "256x256",
+    "gt_boxes": 3,
+    "gt_areas_pct": [
+      3.79,
+      13.53,
+      1.5
+    ],
+    "pred_high_count": 3,
+    "pred_high_confs": [
+      0.907,
+      0.839,
+      0.534
+    ],
+    "pred_low_count": 6,
+    "iou_gt_vs_pred": [
+      0.946,
+      0.957,
+      0.0
+    ],
+    "out_file": "02_Roboflow_powdery495_jpg.rf.6847cccc3739725c604efc4b25bd1a22.jpg"
+  },
+  {
+    "idx": 3,
+    "source": "Roboflow",
+    "filename": "powdery344_jpg.rf.c6a4d9ac91b1a389f94582d1c693f994.jpg",
+    "resolution": "256x256",
+    "gt_boxes": 3,
+    "gt_areas_pct": [
+      7.75,
+      4.89,
+      5.16
+    ],
+    "pred_high_count": 3,
+    "pred_high_confs": [
+      0.932,
+      0.662,
+      0.532
+    ],
+    "pred_low_count": 3,
+    "iou_gt_vs_pred": [
+      0.958,
+      0.928,
+      0.951
+    ],
+    "out_file": "03_Roboflow_powdery344_jpg.rf.c6a4d9ac91b1a389f94582d1c693f994.jpg"
+  },
+  {
+    "idx": 4,
+    "source": "Roboflow",
+    "filename": "powdery201_jpg.rf.e66980d71b75d30de521f75d47409d59.jpg",
+    "resolution": "720x720",
+    "gt_boxes": 3,
+    "gt_areas_pct": [
+      6.27,
+      11.78,
+      11.36
+    ],
+    "pred_high_count": 3,
+    "pred_high_confs": [
+      0.944,
+      0.937,
+      0.937
+    ],
+    "pred_low_count": 3,
+    "iou_gt_vs_pred": [
+      0.971,
+      0.988,
+      0.972
+    ],
+    "out_file": "04_Roboflow_powdery201_jpg.rf.e66980d71b75d30de521f75d47409d59.jpg"
+  },
+  {
+    "idx": 5,
+    "source": "Roboflow",
+    "filename": "powdery539_jpg.rf.ec468e7d45d791cb4faf2349573ff9a4.jpg",
+    "resolution": "720x720",
+    "gt_boxes": 2,
+    "gt_areas_pct": [
+      21.71,
+      27.72
+    ],
+    "pred_high_count": 2,
+    "pred_high_confs": [
+      0.939,
+      0.939
+    ],
+    "pred_low_count": 2,
+    "iou_gt_vs_pred": [
+      0.974,
+      0.973
+    ],
+    "out_file": "05_Roboflow_powdery539_jpg.rf.ec468e7d45d791cb4faf2349573ff9a4.jpg"
+  },
+  {
+    "idx": 6,
+    "source": "Roboflow",
+    "filename": "IMG_0968_JPEG.rf.563622513a55caad230d908419f237d0.jpg",
+    "resolution": "3024x3024",
+    "gt_boxes": 4,
+    "gt_areas_pct": [
+      12.76,
+      13.34,
+      9.45,
+      14.19
+    ],
+    "pred_high_count": 4,
+    "pred_high_confs": [
+      0.926,
+      0.9,
+      0.895,
+      0.877
+    ],
+    "pred_low_count": 4,
+    "iou_gt_vs_pred": [
+      0.961,
+      0.979,
+      0.945,
+      0.982
+    ],
+    "out_file": "06_Roboflow_IMG_0968_JPEG.rf.563622513a55caad230d908419f237d0.jpg"
+  },
+  {
+    "idx": 7,
+    "source": "Roboflow",
+    "filename": "powdery302_jpg.rf.433f3a216484d24a8933a4766114f369.jpg",
+    "resolution": "720x720",
+    "gt_boxes": 3,
+    "gt_areas_pct": [
+      8.21,
+      5.08,
+      5.55
+    ],
+    "pred_high_count": 3,
+    "pred_high_confs": [
+      0.957,
+      0.949,
+      0.924
+    ],
+    "pred_low_count": 3,
+    "iou_gt_vs_pred": [
+      0.955,
+      0.98,
+      0.937
+    ],
+    "out_file": "07_Roboflow_powdery302_jpg.rf.433f3a216484d24a8933a4766114f369.jpg"
+  },
+  {
+    "idx": 8,
+    "source": "Roboflow",
+    "filename": "powdery560_jpg.rf.bd4621c77ea900feef049c81873bbe94.jpg",
+    "resolution": "720x720",
+    "gt_boxes": 2,
+    "gt_areas_pct": [
+      29.34,
+      22.91
+    ],
+    "pred_high_count": 3,
+    "pred_high_confs": [
+      0.948,
+      0.934,
+      0.801
+    ],
+    "pred_low_count": 3,
+    "iou_gt_vs_pred": [
+      0.988,
+      0.943
+    ],
+    "out_file": "08_Roboflow_powdery560_jpg.rf.bd4621c77ea900feef049c81873bbe94.jpg"
+  },
+  {
+    "idx": 9,
+    "source": "Roboflow",
+    "filename": "powdery267_jpg.rf.8dcfcdecc6cf76616697a9f183b758b3.jpg",
+    "resolution": "720x720",
+    "gt_boxes": 3,
+    "gt_areas_pct": [
+      5.85,
+      3.61,
+      4.02
+    ],
+    "pred_high_count": 3,
+    "pred_high_confs": [
+      0.957,
+      0.951,
+      0.913
+    ],
+    "pred_low_count": 3,
+    "iou_gt_vs_pred": [
+      0.989,
+      0.985,
+      0.96
+    ],
+    "out_file": "09_Roboflow_powdery267_jpg.rf.8dcfcdecc6cf76616697a9f183b758b3.jpg"
+  },
+  {
+    "idx": 10,
+    "source": "Roboflow",
+    "filename": "image4-703_jpg.rf.0f47c22dbe53aa678bca6623bd24514b.jpg",
+    "resolution": "256x256",
+    "gt_boxes": 1,
+    "gt_areas_pct": [
+      18.79
+    ],
+    "pred_high_count": 1,
+    "pred_high_confs": [
+      0.697
+    ],
+    "pred_low_count": 1,
+    "iou_gt_vs_pred": [
+      0.96
+    ],
+    "out_file": "10_Roboflow_image4-703_jpg.rf.0f47c22dbe53aa678bca6623bd24514b.jpg"
+  },
+  {
+    "idx": 11,
+    "source": "Roboflow",
+    "filename": "powdery231-1-_jpg.rf.3b2408883f8f9074c9dbe56bbc72ac83.jpg",
+    "resolution": "720x720",
+    "gt_boxes": 3,
+    "gt_areas_pct": [
+      4.97,
+      4.49,
+      6.35
+    ],
+    "pred_high_count": 3,
+    "pred_high_confs": [
+      0.963,
+      0.958,
+      0.868
+    ],
+    "pred_low_count": 3,
+    "iou_gt_vs_pred": [
+      0.973,
+      0.985,
+      0.947
+    ],
+    "out_file": "11_Roboflow_powdery231-1-_jpg.rf.3b2408883f8f9074c9dbe56bbc72a.jpg"
+  },
+  {
+    "idx": 12,
+    "source": "Roboflow",
+    "filename": "IMG_2720_JPG.rf.6843b1270845a417fa4c553dbb7d21e6.jpg",
+    "resolution": "4032x3024",
+    "gt_boxes": 4,
+    "gt_areas_pct": [
+      5.21,
+      2.63,
+      4.43,
+      5.55
+    ],
+    "pred_high_count": 0,
+    "pred_high_confs": [],
+    "pred_low_count": 0,
+    "iou_gt_vs_pred": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "out_file": "12_Roboflow_IMG_2720_JPG.rf.6843b1270845a417fa4c553dbb7d21e6.jpg"
+  },
+  {
+    "idx": 13,
+    "source": "Roboflow",
+    "filename": "IMG_2075_JPG.rf.dcfab8f864bd8ab67eb10dfd5ea777b5.jpg",
+    "resolution": "4032x3024",
+    "gt_boxes": 6,
+    "gt_areas_pct": [
+      5.91,
+      2.28,
+      1.94,
+      0.32,
+      1.4,
+      0.98
+    ],
+    "pred_high_count": 0,
+    "pred_high_confs": [],
+    "pred_low_count": 0,
+    "iou_gt_vs_pred": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "out_file": "13_Roboflow_IMG_2075_JPG.rf.dcfab8f864bd8ab67eb10dfd5ea777b5.jpg"
+  },
+  {
+    "idx": 14,
+    "source": "Roboflow",
+    "filename": "IMG_1654_MOV-0_jpg.rf.97e3907465f3d5d73196431e895de5c6.jpg",
+    "resolution": "1440x1440",
+    "gt_boxes": 5,
+    "gt_areas_pct": [
+      3.32,
+      3.19,
+      7.96,
+      2.92,
+      4.17
+    ],
+    "pred_high_count": 8,
+    "pred_high_confs": [
+      0.918,
+      0.868,
+      0.84,
+      0.816,
+      0.753,
+      0.644,
+      0.581,
+      0.53
+    ],
+    "pred_low_count": 10,
+    "iou_gt_vs_pred": [
+      0.951,
+      0.977,
+      0.983,
+      0.984,
+      0.771
+    ],
+    "out_file": "14_Roboflow_IMG_1654_MOV-0_jpg.rf.97e3907465f3d5d73196431e895d.jpg"
+  },
+  {
+    "idx": 15,
+    "source": "Roboflow",
+    "filename": "IMG_1636_MOV-3_jpg.rf.776ee322d50ed47da9a569607a63b72d.jpg",
+    "resolution": "1440x1440",
+    "gt_boxes": 1,
+    "gt_areas_pct": [
+      1.71
+    ],
+    "pred_high_count": 5,
+    "pred_high_confs": [
+      0.8,
+      0.79,
+      0.586,
+      0.577,
+      0.508
+    ],
+    "pred_low_count": 7,
+    "iou_gt_vs_pred": [
+      0.856
+    ],
+    "out_file": "15_Roboflow_IMG_1636_MOV-3_jpg.rf.776ee322d50ed47da9a569607a63.jpg"
+  },
+  {
+    "idx": 16,
+    "source": "Italia",
+    "filename": "italy_2021_IMG_2310.jpg",
+    "resolution": "3072x2048",
+    "gt_boxes": 1,
+    "gt_areas_pct": [
+      38.88
+    ],
+    "pred_high_count": 1,
+    "pred_high_confs": [
+      0.878
+    ],
+    "pred_low_count": 2,
+    "iou_gt_vs_pred": [
+      0.974
+    ],
+    "out_file": "16_Italia_italy_2021_IMG_2310.jpg"
+  },
+  {
+    "idx": 17,
+    "source": "Italia",
+    "filename": "italy_2021_IMG_2354.jpg",
+    "resolution": "3072x2048",
+    "gt_boxes": 10,
+    "gt_areas_pct": [
+      16.82,
+      3.19,
+      7.21,
+      4.76,
+      6.73,
+      5.5,
+      3.23,
+      4.98,
+      2.33,
+      5.94
+    ],
+    "pred_high_count": 5,
+    "pred_high_confs": [
+      0.829,
+      0.71,
+      0.609,
+      0.59,
+      0.51
+    ],
+    "pred_low_count": 7,
+    "iou_gt_vs_pred": [
+      0.861,
+      0.0,
+      0.793,
+      0.049,
+      0.852,
+      0.236,
+      0.17,
+      0.881,
+      0.024,
+      0.017
+    ],
+    "out_file": "17_Italia_italy_2021_IMG_2354.jpg"
+  },
+  {
+    "idx": 18,
+    "source": "Italia",
+    "filename": "italy_2021_IMG_2504.jpg",
+    "resolution": "3072x2048",
+    "gt_boxes": 2,
+    "gt_areas_pct": [
+      60.16,
+      5.78
+    ],
+    "pred_high_count": 3,
+    "pred_high_confs": [
+      0.892,
+      0.868,
+      0.526
+    ],
+    "pred_low_count": 5,
+    "iou_gt_vs_pred": [
+      0.949,
+      0.865
+    ],
+    "out_file": "18_Italia_italy_2021_IMG_2504.jpg"
+  },
+  {
+    "idx": 19,
+    "source": "Italia",
+    "filename": "italy_2021_Oidio10.jpg",
+    "resolution": "3072x2048",
+    "gt_boxes": 1,
+    "gt_areas_pct": [
+      70.24
+    ],
+    "pred_high_count": 1,
+    "pred_high_confs": [
+      0.699
+    ],
+    "pred_low_count": 1,
+    "iou_gt_vs_pred": [
+      0.967
+    ],
+    "out_file": "19_Italia_italy_2021_Oidio10.jpg"
+  },
+  {
+    "idx": 20,
+    "source": "Italia",
+    "filename": "italy_2021_IMG_2516.jpg",
+    "resolution": "3072x2048",
+    "gt_boxes": 4,
+    "gt_areas_pct": [
+      18.01,
+      26.52,
+      6.12,
+      5.74
+    ],
+    "pred_high_count": 3,
+    "pred_high_confs": [
+      0.882,
+      0.754,
+      0.721
+    ],
+    "pred_low_count": 4,
+    "iou_gt_vs_pred": [
+      0.976,
+      0.944,
+      0.911,
+      0.086
+    ],
+    "out_file": "20_Italia_italy_2021_IMG_2516.jpg"
+  },
+  {
+    "idx": 21,
+    "source": "Italia",
+    "filename": "italy_2021_IMG_2528.jpg",
+    "resolution": "3072x2048",
+    "gt_boxes": 4,
+    "gt_areas_pct": [
+      4.24,
+      7.58,
+      14.83,
+      6.21
+    ],
+    "pred_high_count": 3,
+    "pred_high_confs": [
+      0.781,
+      0.741,
+      0.735
+    ],
+    "pred_low_count": 4,
+    "iou_gt_vs_pred": [
+      0.942,
+      0.965,
+      0.923,
+      0.017
+    ],
+    "out_file": "21_Italia_italy_2021_IMG_2528.jpg"
+  },
+  {
+    "idx": 22,
+    "source": "Italia",
+    "filename": "italy_2021_germoglio_002.jpg",
+    "resolution": "3072x2048",
+    "gt_boxes": 1,
+    "gt_areas_pct": [
+      26.44
+    ],
+    "pred_high_count": 1,
+    "pred_high_confs": [
+      0.809
+    ],
+    "pred_low_count": 1,
+    "iou_gt_vs_pred": [
+      0.975
+    ],
+    "out_file": "22_Italia_italy_2021_germoglio_002.jpg"
+  },
+  {
+    "idx": 23,
+    "source": "Italia",
+    "filename": "italy_2021_Chardonnay_foglia_Lamon_01.jpg",
+    "resolution": "3072x2048",
+    "gt_boxes": 1,
+    "gt_areas_pct": [
+      62.99
+    ],
+    "pred_high_count": 1,
+    "pred_high_confs": [
+      0.909
+    ],
+    "pred_low_count": 2,
+    "iou_gt_vs_pred": [
+      0.961
+    ],
+    "out_file": "23_Italia_italy_2021_Chardonnay_foglia_Lamon_01.jpg"
+  },
+  {
+    "idx": 24,
+    "source": "Italia",
+    "filename": "italy_2021_IMG_2302.jpg",
+    "resolution": "3072x2048",
+    "gt_boxes": 4,
+    "gt_areas_pct": [
+      50.0,
+      4.1,
+      5.15,
+      3.68
+    ],
+    "pred_high_count": 4,
+    "pred_high_confs": [
+      0.903,
+      0.665,
+      0.57,
+      0.533
+    ],
+    "pred_low_count": 6,
+    "iou_gt_vs_pred": [
+      0.827,
+      0.016,
+      0.0,
+      0.832
+    ],
+    "out_file": "24_Italia_italy_2021_IMG_2302.jpg"
+  },
+  {
+    "idx": 25,
+    "source": "Italia",
+    "filename": "italy_2021_grappolo_merlot_02.jpg",
+    "resolution": "3072x2048",
+    "gt_boxes": 1,
+    "gt_areas_pct": [
+      6.99
+    ],
+    "pred_high_count": 1,
+    "pred_high_confs": [
+      0.791
+    ],
+    "pred_low_count": 1,
+    "iou_gt_vs_pred": [
+      0.937
+    ],
+    "out_file": "25_Italia_italy_2021_grappolo_merlot_02.jpg"
+  },
+  {
+    "idx": 26,
+    "source": "Italia",
+    "filename": "italy_2021_Oidio05.jpg",
+    "resolution": "3072x2048",
+    "gt_boxes": 1,
+    "gt_areas_pct": [
+      69.56
+    ],
+    "pred_high_count": 1,
+    "pred_high_confs": [
+      0.842
+    ],
+    "pred_low_count": 1,
+    "iou_gt_vs_pred": [
+      0.966
+    ],
+    "out_file": "26_Italia_italy_2021_Oidio05.jpg"
+  },
+  {
+    "idx": 27,
+    "source": "Italia",
+    "filename": "italy_2021_germoglio_015d.jpg",
+    "resolution": "3072x2048",
+    "gt_boxes": 2,
+    "gt_areas_pct": [
+      11.3,
+      1.76
+    ],
+    "pred_high_count": 1,
+    "pred_high_confs": [
+      0.704
+    ],
+    "pred_low_count": 2,
+    "iou_gt_vs_pred": [
+      0.737,
+      0.0
+    ],
+    "out_file": "27_Italia_italy_2021_germoglio_015d.jpg"
+  },
+  {
+    "idx": 28,
+    "source": "Italia",
+    "filename": "italy_2021_IMG_2535.jpg",
+    "resolution": "3072x2048",
+    "gt_boxes": 3,
+    "gt_areas_pct": [
+      43.03,
+      8.61,
+      26.72
+    ],
+    "pred_high_count": 3,
+    "pred_high_confs": [
+      0.894,
+      0.778,
+      0.695
+    ],
+    "pred_low_count": 5,
+    "iou_gt_vs_pred": [
+      0.962,
+      0.115,
+      0.865
+    ],
+    "out_file": "28_Italia_italy_2021_IMG_2535.jpg"
+  },
+  {
+    "idx": 29,
+    "source": "Italia",
+    "filename": "italy_2021_IMG_2321.jpg",
+    "resolution": "3072x2048",
+    "gt_boxes": 2,
+    "gt_areas_pct": [
+      14.06,
+      12.95
+    ],
+    "pred_high_count": 2,
+    "pred_high_confs": [
+      0.794,
+      0.641
+    ],
+    "pred_low_count": 3,
+    "iou_gt_vs_pred": [
+      0.934,
+      0.924
+    ],
+    "out_file": "29_Italia_italy_2021_IMG_2321.jpg"
+  },
+  {
+    "idx": 30,
+    "source": "Italia",
+    "filename": "italy_2021_WhatsApp_Image_2021-05-12_at_12.05.31.jpeg",
+    "resolution": "1200x1600",
+    "gt_boxes": 2,
+    "gt_areas_pct": [
+      21.44,
+      8.08
+    ],
+    "pred_high_count": 2,
+    "pred_high_confs": [
+      0.887,
+      0.847
+    ],
+    "pred_low_count": 2,
+    "iou_gt_vs_pred": [
+      0.942,
+      0.951
+    ],
+    "out_file": "30_Italia_italy_2021_WhatsApp_Image_2021-05-12_at_12.05.31.jpg"
+  }
+]

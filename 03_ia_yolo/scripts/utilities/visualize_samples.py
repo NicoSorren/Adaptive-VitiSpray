@@ -8,10 +8,10 @@ from ultralytics import YOLO
 from vitispray.paths import MONOCLASS_DATASET, PROJECT_ROOT
 
 def test_visual_predictions():
-    base_dir = Path(__file__).resolve().parent
-    weights_path = base_dir / "runs" / "train" / "monoclass_pm_v1" / "weights" / "best.pt"
+    from vitispray.paths import YOLO_RUNS_DIR, YOLO_PREDICTIONS_DIR
+    weights_path = YOLO_RUNS_DIR / "train" / "monoclass_pm_v1" / "weights" / "best.pt"
     dataset_dir = MONOCLASS_DATASET / "valid"
-    output_dir = base_dir / "predicciones_visuales"
+    output_dir = YOLO_PREDICTIONS_DIR / "predicciones_visuales"
     
     print("=" * 70)
     print("Iniciando inferencia visual en alta resolucion...")

@@ -1,0 +1,14 @@
+# Directivas de Comportamiento del Agente
+
+## Acciones de Lectura e Inspección (Permitidas)
+- Diagnóstico del entorno y GPU: `nvidia-smi`, scripts rápidos de consulta.
+- Exploración de directorios: `dir`, `ls`, `tree`.
+- Inspección de control de versiones: `git status`, `git diff`, `git log`.
+- Scripts de validación visual: lectura de matrices e imágenes con PIL/OpenCV/NumPy sin sobreescritura de archivos en disco.
+
+## Restricciones Críticas (Exigir confirmación del usuario SIEMPRE)
+- NUNCA elimines carpetas ni archivos (prohibido `rm`, `del`, `rmdir`).
+- NUNCA sobreescribas checkpoints ni registros de entrenamiento dentro de `runs/`.
+- NUNCA instales, desinstales o modifiques librerías del entorno (`pip`, `conda`) sin pedir autorización previa.
+- NUNCA ejecutes modificaciones en Git (`git commit`, `git reset`, `git checkout`).
+- Antes de lanzar cualquier entrenamiento (`yolo train`), detalla los hiperparámetros (batch, epochs, imgsz) en el chat y solicita aprobación explícita.

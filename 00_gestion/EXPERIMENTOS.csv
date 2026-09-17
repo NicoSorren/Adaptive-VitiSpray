@@ -1,3 +1,8 @@
-ID_Exp,Fecha,Modelo,Dataset,Hiperparametros,Metricas_Clave,Notas
-1,2026-09-15,YOLOv11s,dataset_detect_field,"default",P:90% R:78%,Modelo base elegido para MVP
-2,2026-09-16,YOLOv11m,dataset_detect_field,"default",P:~88% R:~73%,Descartado frente a v11s por ser más pesado y rendir peor
+ID,Nombre_Run,Fecha_Aprox,Modelo_Base,Dataset,Epocas,Batch,Img_Size,Precision,Recall,mAP50,mAP50-95
+EXP-YOLO-001,test_sanity_check,Sept-2026,yolo11s-seg.pt,Final Grape Leaf (3 Clases),1,8,640,0.4539,0.1128,0.0787,0.0383
+EXP-YOLO-002,baseline_v1,Sept-2026,yolo11s-seg.pt,Final Grape Leaf (3 Clases),40,8,640,0.6341,0.4114,0.4473,0.3630
+EXP-YOLO-003,baseline_80epochs,Sept-2026,yolo11s-seg.pt,Final Grape Leaf (3 Clases),80,8,640,0.6378,0.4222,0.4681,0.3737
+EXP-YOLO-004,monoclass_pm_v1,Sept-2026,yolo11s-seg.pt,dataset_monoclass_powdery_mildew (1 Clase),60,8,640,0.7993,0.5650,0.6458,0.5544
+EXP-YOLO-005,yolo11s_detect_field_v1,Sept-2026,yolo11s.pt,dataset_detect_field (1 Clase),60,16,640,0.8280,0.5361,0.6449,0.5418
+EXP-YOLO-006,yolo11s_detect_field_v2,Sept-2026,last.pt (FT),dataset_detect_field (1 Clase),40,16,640,0.8069,0.5612,0.6585,0.5418
+EXP-YOLO-007,yolo11m_detect_field_v1,Sept-2026,yolo11m.pt,dataset_detect_field (1 Clase),70,8,640,0.7465,0.5617,0.6282,0.5300

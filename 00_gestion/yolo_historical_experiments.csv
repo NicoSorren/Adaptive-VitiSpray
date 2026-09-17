@@ -1,0 +1,8 @@
+run_name,path,model,dataset,epochs_configured,epochs_completed,batch,imgsz,optimizer,lr0,seed,precision,recall,map50,map50_95,has_best,has_last
+test_sanity_check,runs/train/test_sanity_check,yolo11s-seg.pt,Final Grape Leaf Disease Detection,1,1,8,640,auto,0.01,0,0.45395,0.11284,0.07878,0.03839,True,True
+baseline_v1,runs/train/baseline_v1,yolo11s-seg.pt,Final Grape Leaf Disease Detection,40,40,8,640,auto,0.01,0,0.63416,0.41148,0.44737,0.36305,True,True
+baseline_80epochs,runs/train/baseline_80epochs,yolo11s-seg.pt,Final Grape Leaf Disease Detection,80,80,8,640,auto,0.01,0,0.63789,0.42228,0.46817,0.37375,True,True
+monoclass_pm_v1,runs/train/monoclass_pm_v1,yolo11s-seg.pt,dataset_monoclass_powdery_mildew,60,60,8,640,auto,0.01,0,0.79935,0.56503,0.64584,0.55448,True,True
+yolo11s_detect_field_v1,runs/detect/yolo11s_detect_field_v1,yolo11s.pt,dataset_detect_field,60,60,16,640,auto,0.01,0,0.82808,0.53613,0.64499,0.54182,True,True
+yolo11s_detect_field_v2,runs/detect/yolo11s_detect_field_v2,last.pt,dataset_detect_field,40,40,16,640,auto,0.01,0,0.80695,0.56126,0.65854,0.54183,True,True
+yolo11m_detect_field_v1,runs/detect/yolo11m_detect_field_v1,yolo11m.pt,dataset_detect_field,70,70,8,640,auto,0.01,0,0.74656,0.56178,0.62822,0.53001,True,True

@@ -9,10 +9,10 @@ if sys.stdout.encoding != 'utf-8':
     sys.stdout.reconfigure(encoding='utf-8')
 
 def main():
-    from vitispray.paths import DETECT_FIELD_DATASET, PROJECT_ROOT
-    model_path = PROJECT_ROOT / "runs" / "detect" / "yolo11m_detect_field_v1" / "weights" / "best.pt"
+    from vitispray.paths import DETECT_FIELD_DATASET, YOLO_RUNS_DIR, YOLO_PREDICTIONS_DIR
+    model_path = YOLO_RUNS_DIR / "detect" / "yolo11m_detect_field_v1" / "weights" / "best.pt"
     data_yaml = DETECT_FIELD_DATASET / "data.yaml"
-    out_dir = PROJECT_ROOT / "test_visual_predictions_m1"
+    out_dir = YOLO_PREDICTIONS_DIR / "test_visual_predictions_m1"
     out_dir.mkdir(parents=True, exist_ok=True)
 
     print("=" * 70)
@@ -32,7 +32,7 @@ def main():
         batch=16,
         imgsz=640,
         device="0" if torch.cuda.is_available() else "cpu",
-        project=str(base_dir / "runs" / "detect"),
+        project=str(YOLO_RUNS_DIR / "detect"),
         name="test_evaluation_m1",
         exist_ok=True,
         save_json=False,

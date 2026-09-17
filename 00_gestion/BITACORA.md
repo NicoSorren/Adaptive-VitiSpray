@@ -56,3 +56,28 @@ Se crearon las carpetas `00_gestion/`, `01_documentacion/`, `02_datasets/`, `03_
 ### Verificaciones
 - Se verificó la integridad mediante el comando `check_det_dataset` de Ultralytics, validando la accesibilidad a imágenes y labels.
 - Se generó el informe de resoluciones `DATASET_IMAGE_RESOLUTIONS.md`.
+## Registro de Reorganización (2026-09-17) - FASE 2 Bloque C
+**IA y YOLO Consolidados en `03_ia_yolo/`**
+
+### Archivos Movidos
+- **Scripts de Entrenamiento (`03_ia_yolo/scripts/training/`):** `train_detection.py`, `train_baseline.py`
+- **Scripts de Preparación (`03_ia_yolo/scripts/preparation/`):** `prepare_detection_dataset.py`, `prepare_monoclass_dataset.py`
+- **Scripts de Evaluación (`03_ia_yolo/scripts/evaluation/`):** `evaluate_test_set.py`, `verify_dataset_detect.py`
+- **Scripts de Utilidades (`03_ia_yolo/scripts/utilities/`):** `visualize_samples.py`, `check_dataset_polygons.py`, `read_results.py`, `analyze_resolutions.py`, `audit_dataset.py`, `compute_bbox_sizes.py`, `extract_runs.py`, `generate_sample_preds.py`, `print_cases.py`, `visual_bbox_audit.py`
+- **Carpetas de Resultados:** 
+  - `runs/` -> `03_ia_yolo/runs/`
+  - `inspeccion_*` -> `03_ia_yolo/inspections/`
+  - `predicciones_*` y `test_visual_*` -> `03_ia_yolo/predictions/`
+- **Pesos (`03_ia_yolo/weights/pretrained/`):** `yolo11m.pt`, `yolo11s.pt`, `yolo11s-seg.pt`
+
+### Cambios de Rutas Realizados
+- Se agregaron las constantes `YOLO_DIR`, `YOLO_RUNS_DIR`, `YOLO_WEIGHTS_DIR`, `YOLO_PRETRAINED_WEIGHTS_DIR`, `YOLO_SELECTED_WEIGHTS_DIR`, `YOLO_PREDICTIONS_DIR`, `YOLO_INSPECTIONS_DIR`, `YOLO_METRICS_DIR` a `src/vitispray/paths.py`.
+- Se refactorizaron los scripts movidos para eliminar rutas hardcodeadas (ej. `Path(__file__)`) y utilizar las nuevas constantes de `vitispray.paths`.
+
+### Documentación y Gestión
+- Se creó `03_ia_yolo/README.md` detallando la estructura y convenciones del módulo.
+- Se actualizó `00_gestion/EXPERIMENTOS.csv` reconstruyendo la historia desde los 7 runs verificables.
+- Se creó `00_gestion/NOTAS_PARA_MEMORIA_PFE.md` incorporando las metodologías, decisiones técnicas (arquitectura two-pass, dataset), y la corrección metodológica del problema de escala (demostrando que imgsz=640 es viable y los objetos son de tamaño medio/grande, no de 1-8 px).
+
+### Verificaciones
+- Smoke tests completados verificando imports y acceso a datasets/pesos (`python -c "from vitispray.paths import YOLO_DIR..."`, `train_detection.py --help`, compilación sintáctica mediante `py_compile`).

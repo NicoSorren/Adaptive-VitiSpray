@@ -17,8 +17,13 @@ if not (PROJECT_ROOT / "00_gestion").exists() and not (PROJECT_ROOT / "requireme
 # 2. Carpetas Principales (Relativas a PROJECT_ROOT)
 DATASETS_DIR = PROJECT_ROOT / "02_datasets"
 YOLO_DIR = PROJECT_ROOT / "03_ia_yolo"
-OUTPUTS_DIR = YOLO_DIR / "runs"
-WEIGHTS_DIR = YOLO_DIR / "weights"
+YOLO_RUNS_DIR = YOLO_DIR / "runs"
+YOLO_WEIGHTS_DIR = YOLO_DIR / "weights"
+YOLO_PRETRAINED_WEIGHTS_DIR = YOLO_WEIGHTS_DIR / "pretrained"
+YOLO_SELECTED_WEIGHTS_DIR = YOLO_WEIGHTS_DIR / "selected"
+YOLO_PREDICTIONS_DIR = YOLO_DIR / "predictions"
+YOLO_INSPECTIONS_DIR = YOLO_DIR / "inspections"
+YOLO_METRICS_DIR = YOLO_DIR / "metrics"
 PRESCRIPTION_DIR = PROJECT_ROOT / "05_mapa_prescripcion" / "viti_prescription"
 
 PUBLIC_DATASETS_DIR = DATASETS_DIR / "publicos"

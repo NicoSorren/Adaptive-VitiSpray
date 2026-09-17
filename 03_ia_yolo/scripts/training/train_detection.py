@@ -25,7 +25,7 @@ def main():
                         help="Modelo inicial. Usar last.pt/best.pt para fine-tuning desde un checkpoint existente")
     args = parser.parse_args()
 
-    from vitispray.paths import DETECT_FIELD_DATASET
+    from vitispray.paths import DETECT_FIELD_DATASET, YOLO_RUNS_DIR
     data_yaml = DETECT_FIELD_DATASET / "data.yaml"
 
     print("=" * 70)
@@ -58,7 +58,7 @@ def main():
         imgsz=args.imgsz,
         device=args.device,
         workers=args.workers,
-        project=str(base_dir / "runs" / "detect"),
+        project=str(YOLO_RUNS_DIR / "detect"),
         name=args.name,
         exist_ok=True,
         plots=True,

@@ -27,8 +27,7 @@ def main():
     args = parse_args()
     
     # 1. Rutas
-    base_dir = Path(__file__).resolve().parent
-    from vitispray.paths import MONOCLASS_DATASET
+    from vitispray.paths import MONOCLASS_DATASET, YOLO_RUNS_DIR
     dataset_yaml = MONOCLASS_DATASET / "data.yaml"
     
     print("=" * 70)
@@ -63,7 +62,7 @@ def main():
         imgsz=args.imgsz,
         device=args.device,
         workers=args.workers,
-        project=str(base_dir / "runs" / "train"),
+        project=str(YOLO_RUNS_DIR / "train"),
         name=args.name,
         exist_ok=True,
         plots=True,

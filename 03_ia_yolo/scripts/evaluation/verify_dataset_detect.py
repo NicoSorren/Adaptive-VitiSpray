@@ -10,10 +10,10 @@ if sys.stdout.encoding != 'utf-8':
 
 random.seed(42)
 
-from vitispray.paths import DETECT_FIELD_DATASET, PROJECT_ROOT
+from vitispray.paths import DETECT_FIELD_DATASET, YOLO_INSPECTIONS_DIR
 DATASET_DIR = DETECT_FIELD_DATASET
-OUT_DIR = PROJECT_ROOT / "inspeccion_dataset_detect"
-OUT_DIR.mkdir(exist_ok=True)
+OUT_DIR = YOLO_INSPECTIONS_DIR / "inspeccion_dataset_detect"
+OUT_DIR.mkdir(exist_ok=True, parents=True)
 
 for split in ["train", "valid"]:
     img_dir = DATASET_DIR / split / "images"

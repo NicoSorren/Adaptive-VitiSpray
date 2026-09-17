@@ -3,10 +3,10 @@ import glob
 import cv2
 import numpy as np
 
-from vitispray.paths import PUBLIC_DATASETS_DIR
+from vitispray.paths import PUBLIC_DATASETS_DIR, YOLO_INSPECTIONS_DIR
 LABEL_DIR = str(PUBLIC_DATASETS_DIR / "Final Grape Leaf Disease Detection and Classification.v1i.yolov11" / "train" / "labels")
 IMG_DIR = str(PUBLIC_DATASETS_DIR / "Final Grape Leaf Disease Detection and Classification.v1i.yolov11" / "train" / "images")
-OUT_DIR = "inspeccion_ground_truth"
+OUT_DIR = str(YOLO_INSPECTIONS_DIR / "inspeccion_ground_truth")
 os.makedirs(OUT_DIR, exist_ok=True)
 
 CLASS_NAMES = {0: "Birds_Eye_Rot", 1: "Healthy", 2: "Powdery_Mildew"}
