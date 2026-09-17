@@ -21,6 +21,10 @@ OUTPUTS_DIR = YOLO_DIR / "runs"
 WEIGHTS_DIR = YOLO_DIR / "weights"
 PRESCRIPTION_DIR = PROJECT_ROOT / "05_mapa_prescripcion" / "viti_prescription"
 
+PUBLIC_DATASETS_DIR = DATASETS_DIR / "publicos"
+PROCESSED_DATASETS_DIR = DATASETS_DIR / "procesados"
+OWN_DATASETS_DIR = DATASETS_DIR / "propios"
+
 # 3. Rutas Específicas
-DETECT_FIELD_DATASET = DATASETS_DIR / "dataset_detect_field"
-MONOCLASS_DATASET = DATASETS_DIR / "dataset_monoclass_powdery_mildew"
+DETECT_FIELD_DATASET = PROCESSED_DATASETS_DIR / "dataset_detect_field"
+MONOCLASS_DATASET = PROCESSED_DATASETS_DIR / "dataset_monoclass_powdery_mildew"

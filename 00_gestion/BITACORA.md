@@ -39,3 +39,20 @@ Se crearon las carpetas `00_gestion/`, `01_documentacion/`, `02_datasets/`, `03_
 ### Verificaciones
 - Generador de anteproyecto modificado correctamente.
 - `README.md` creado en `anteproyecto/` detallando versiones vigentes y obsoletas.
+
+## Registro de Reorganización (2026-09-17) - FASE 2 Bloque B
+**Datasets Consolidados en `02_datasets/`**
+
+### Archivos Movidos
+- **Origen:** `dataset_detect_field` -> **Destino:** `02_datasets/procesados/`
+- **Origen:** `dataset_monoclass_powdery_mildew` -> **Destino:** `02_datasets/procesados/`
+- **Origen:** `Final Grape Leaf Disease Detection...` -> **Destino:** `02_datasets/publicos/`
+- **Origen:** `Downy Mildew and Powdery Mildew Symptoms` -> **Destino:** `02_datasets/publicos/`
+
+### Cambios de Configuración
+- Archivos `data.yaml` actualizados eliminando la clave `path` estricta para garantizar portabilidad. 
+- Scripts de Python refactorizados para usar `from vitispray.paths import DETECT_FIELD_DATASET, MONOCLASS_DATASET`.
+
+### Verificaciones
+- Se verificó la integridad mediante el comando `check_det_dataset` de Ultralytics, validando la accesibilidad a imágenes y labels.
+- Se generó el informe de resoluciones `DATASET_IMAGE_RESOLUTIONS.md`.

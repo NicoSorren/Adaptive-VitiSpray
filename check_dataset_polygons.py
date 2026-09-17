@@ -3,8 +3,9 @@ import glob
 import cv2
 import numpy as np
 
-LABEL_DIR = "Final Grape Leaf Disease Detection and Classification.v1i.yolov11/train/labels"
-IMG_DIR = "Final Grape Leaf Disease Detection and Classification.v1i.yolov11/train/images"
+from vitispray.paths import PUBLIC_DATASETS_DIR
+LABEL_DIR = str(PUBLIC_DATASETS_DIR / "Final Grape Leaf Disease Detection and Classification.v1i.yolov11" / "train" / "labels")
+IMG_DIR = str(PUBLIC_DATASETS_DIR / "Final Grape Leaf Disease Detection and Classification.v1i.yolov11" / "train" / "images")
 OUT_DIR = "inspeccion_ground_truth"
 os.makedirs(OUT_DIR, exist_ok=True)
 

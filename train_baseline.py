@@ -28,7 +28,8 @@ def main():
     
     # 1. Rutas
     base_dir = Path(__file__).resolve().parent
-    dataset_yaml = Path(args.data) if Path(args.data).is_absolute() else (base_dir / args.data)
+    from vitispray.paths import MONOCLASS_DATASET
+    dataset_yaml = MONOCLASS_DATASET / "data.yaml"
     
     print("=" * 70)
     print("ADAPTIVE-VITISPRAY - ENTRENAMIENTO DE PERCEPCION (YOLOv11-seg)")

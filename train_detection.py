@@ -25,8 +25,8 @@ def main():
                         help="Modelo inicial. Usar last.pt/best.pt para fine-tuning desde un checkpoint existente")
     args = parser.parse_args()
 
-    base_dir = Path(__file__).resolve().parent
-    data_yaml = base_dir / "dataset_detect_field" / "data.yaml"
+    from vitispray.paths import DETECT_FIELD_DATASET
+    data_yaml = DETECT_FIELD_DATASET / "data.yaml"
 
     print("=" * 70)
     print("🚜 ENTRENAMIENTO YOLOv11s-DETECT (BOUNDING BOXES) - CAMPO MULTI-ORIGEN")

@@ -10,9 +10,9 @@ if sys.stdout.encoding != 'utf-8':
 
 random.seed(42)
 
-BASE_DIR = Path(__file__).resolve().parent
-DATASET_DIR = BASE_DIR / "dataset_detect_field"
-OUT_DIR = BASE_DIR / "inspeccion_dataset_detect"
+from vitispray.paths import DETECT_FIELD_DATASET, PROJECT_ROOT
+DATASET_DIR = DETECT_FIELD_DATASET
+OUT_DIR = PROJECT_ROOT / "inspeccion_dataset_detect"
 OUT_DIR.mkdir(exist_ok=True)
 
 for split in ["train", "valid"]:

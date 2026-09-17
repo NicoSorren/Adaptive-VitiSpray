@@ -11,8 +11,9 @@ from pathlib import Path
 
 def prepare_monoclass():
     base_dir = Path(__file__).resolve().parent
-    orig_dir = base_dir / "Final Grape Leaf Disease Detection and Classification.v1i.yolov11"
-    target_dir = base_dir / "dataset_monoclass_powdery_mildew"
+    from vitispray.paths import PUBLIC_DATASETS_DIR, MONOCLASS_DATASET
+    orig_dir = PUBLIC_DATASETS_DIR / "Final Grape Leaf Disease Detection and Classification.v1i.yolov11"
+    target_dir = MONOCLASS_DATASET
     
     print("=" * 70)
     print("[*] CREANDO DATASET MONO-CLASE: POWDERY MILDEW (OIDIO)")

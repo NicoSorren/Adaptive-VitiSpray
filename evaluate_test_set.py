@@ -9,10 +9,10 @@ if sys.stdout.encoding != 'utf-8':
     sys.stdout.reconfigure(encoding='utf-8')
 
 def main():
-    base_dir = Path(__file__).resolve().parent
-    model_path = base_dir / "runs" / "detect" / "yolo11m_detect_field_v1" / "weights" / "best.pt"
-    data_yaml = base_dir / "dataset_detect_field" / "data.yaml"
-    out_dir = base_dir / "test_visual_predictions_m1"
+    from vitispray.paths import DETECT_FIELD_DATASET, PROJECT_ROOT
+    model_path = PROJECT_ROOT / "runs" / "detect" / "yolo11m_detect_field_v1" / "weights" / "best.pt"
+    data_yaml = DETECT_FIELD_DATASET / "data.yaml"
+    out_dir = PROJECT_ROOT / "test_visual_predictions_m1"
     out_dir.mkdir(parents=True, exist_ok=True)
 
     print("=" * 70)
@@ -54,8 +54,8 @@ def main():
 
     # 2. Generar muestras visuales con predicciones en alta resolución
     print("\n[2/2] Generando predicciones visuales en imágenes de test...")
-    test_img_dir = base_dir / "dataset_detect_field" / "test" / "images"
-    test_lbl_dir = base_dir / "dataset_detect_field" / "test" / "labels"
+    test_img_dir = DETECT_FIELD_DATASET / "test" / "images"
+    test_lbl_dir = DETECT_FIELD_DATASET / "test" / "labels"
     
     # Buscar imágenes que tengan oídio anotado y algunas sin anotar
     with_disease = []

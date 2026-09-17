@@ -5,11 +5,12 @@ sobre hojas con Oídio confirmado.
 
 from pathlib import Path
 from ultralytics import YOLO
+from vitispray.paths import MONOCLASS_DATASET, PROJECT_ROOT
 
 def test_visual_predictions():
     base_dir = Path(__file__).resolve().parent
     weights_path = base_dir / "runs" / "train" / "monoclass_pm_v1" / "weights" / "best.pt"
-    dataset_dir = base_dir / "dataset_monoclass_powdery_mildew" / "valid"
+    dataset_dir = MONOCLASS_DATASET / "valid"
     output_dir = base_dir / "predicciones_visuales"
     
     print("=" * 70)

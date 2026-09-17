@@ -20,10 +20,11 @@ if sys.stdout.encoding != 'utf-8':
 # Fijar semilla para reproducibilidad exacta
 random.seed(42)
 
-BASE_DIR = Path(__file__).resolve().parent
-ORIG_BASE_DIR = BASE_DIR / "Final Grape Leaf Disease Detection and Classification.v1i.yolov11"
-ITALY_DIR = BASE_DIR / "Downy Mildew and Powdery Mildew Symptoms"
-TARGET_DIR = BASE_DIR / "dataset_detect_field"
+from vitispray.paths import PROJECT_ROOT, PUBLIC_DATASETS_DIR, DETECT_FIELD_DATASET
+
+ORIG_BASE_DIR = PUBLIC_DATASETS_DIR / "Final Grape Leaf Disease Detection and Classification.v1i.yolov11"
+ITALY_DIR = PUBLIC_DATASETS_DIR / "Downy Mildew and Powdery Mildew Symptoms"
+TARGET_DIR = DETECT_FIELD_DATASET
 
 # Palabras clave de carpetas a DESCARTAR (viveros, macetas, plantines)
 DISCARD_KEYWORDS = ["piantine", "vaso"]
