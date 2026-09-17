@@ -1,0 +1,3 @@
+ID_Exp,Fecha,Modelo,Dataset,Hiperparametros,Metricas_Clave,Notas
+1,2026-09-15,YOLOv11s,dataset_detect_field,"default",P:90% R:78%,Modelo base elegido para MVP
+2,2026-09-16,YOLOv11m,dataset_detect_field,"default",P:~88% R:~73%,Descartado frente a v11s por ser más pesado y rendir peor

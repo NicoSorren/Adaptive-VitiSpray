@@ -1,0 +1,45 @@
+{
+    "metadata": {
+        "model_type": "MVP_distance_decay",
+        "environment": {
+            "wind_speed_ms": 3.0,
+            "wind_direction_deg": 0.0,
+            "temperature_c": 22.0,
+            "humidity_percent": 65.0
+        },
+        "parameters": {
+            "k_upwind": 0.5,
+            "k_downwind": 0.15,
+            "risk_threshold": 0.2,
+            "base_risk": 1.0
+        }
+    },
+    "row_id": 1,
+    "row_length": 100.0,
+    "zones": [
+        {
+            "start": 17.0,
+            "end": 30.1,
+            "risk_max": 0.91,
+            "source_spot_ids": [
+                1
+            ]
+        },
+        {
+            "start": 45.1,
+            "end": 57.8,
+            "risk_max": 0.87,
+            "source_spot_ids": [
+                2
+            ]
+        },
+        {
+            "start": 71.9,
+            "end": 85.3,
+            "risk_max": 0.95,
+            "source_spot_ids": [
+                3
+            ]
+        }
+    ]
+}

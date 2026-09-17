@@ -16,6 +16,16 @@ __pycache__/
 # Los datos se descargan desde Roboflow mediante el enlace en el README
 Final Grape Leaf Disease Detection and Classification.v1i.yolov11/
 dataset_monoclass_powdery_mildew/
+dataset_detect_field/
+HERMOS/
+Niphad_Grapeleaf_Disease_Dataset/
+Downy Mildew and Powdery Mildew Symptoms/
+inspeccion_ground_truth/
+inspeccion_hermos/
+inspeccion_ghiani/
+inspeccion_ghiani_2022/
+inspeccion_dataset_detect/
+test_visual_predictions/
 *.cache
 *.cache.npy
 labels.cache
