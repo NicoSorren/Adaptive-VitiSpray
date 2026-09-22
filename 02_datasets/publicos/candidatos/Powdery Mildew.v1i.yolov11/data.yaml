@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['Powdery-Mildew']
+
+roboflow:
+  workspace: nsorrentino2001-gmail-com
+  project: powdery-mildew-29nig-8r0rg
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/nsorrentino2001-gmail-com/powdery-mildew-29nig-8r0rg/dataset/1

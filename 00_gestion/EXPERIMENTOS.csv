@@ -6,3 +6,5 @@ EXP-YOLO-004,monoclass_pm_v1,Sept-2026,yolo11s-seg.pt,dataset_monoclass_powdery_
 EXP-YOLO-005,yolo11s_detect_field_v1,Sept-2026,yolo11s.pt,dataset_detect_field (1 Clase),60,16,640,0.8280,0.5361,0.6449,0.5418
 EXP-YOLO-006,yolo11s_detect_field_v2,Sept-2026,last.pt (FT),dataset_detect_field (1 Clase),40,16,640,0.8069,0.5612,0.6585,0.5418
 EXP-YOLO-007,yolo11m_detect_field_v1,Sept-2026,yolo11m.pt,dataset_detect_field (1 Clase),70,8,640,0.7465,0.5617,0.6282,0.5300
+EXP-YOLO-EXT-001,external_validation,Sept-2026,best.pt (v11m_v1),external (19 imgs),-,-,640,0.50 (Qualitative),0.00 (FP),-,-
+EXP-YOLO-EXT-002,external_validation_v2,Sept-2026,best.pt (v11m_v1),external_v2 (19 imgs),-,-,640,0.58 (Qualitative),0.00 (FP),-,-
